@@ -1,0 +1,6 @@
+framework module Pods_ZSWKWebViewVC_master {
+  umbrella header "Pods-ZSWKWebViewVC-master-umbrella.h"
+
+  export *
+  module * { export * }
+}
