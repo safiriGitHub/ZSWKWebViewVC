@@ -106,8 +106,8 @@ Pod::Spec.new do |s|
 
     s.subspec 'WKWebViewJavascriptBridge' do |jsbridge|
       jsbridge.source_files = "Classes/WKWebViewJavascriptBridge/**/*.{h,m}"
-      jsbridge.dependency 'ZSWKWebViewVC/Base'
       jsbridge.dependency 'WebViewJavascriptBridge'
+      jsbridge.dependency 'ZSWKWebViewVC/Base'
     end
 
   # s.public_header_files = "Classes/**/*.h"
