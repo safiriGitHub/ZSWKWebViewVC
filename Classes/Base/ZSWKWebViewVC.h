@@ -70,6 +70,12 @@ typedef NS_ENUM(NSUInteger, WebNavigationBarStyle) {
  */
 @property (nonatomic ,assign) BOOL allowCleanCacheAndCookie;
 
+
+/**
+ 是否禁止滑动返回，默认NO可以左滑返回上一页
+ */
+@property (nonatomic ,assign) BOOL forbidPopGestureRecognizer;
+
 @end
 
 /*

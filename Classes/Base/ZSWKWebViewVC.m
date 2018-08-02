@@ -8,7 +8,7 @@
 
 #import "ZSWKWebViewVC.h"
 
-@interface ZSWKWebViewVC ()
+@interface ZSWKWebViewVC ()<UIGestureRecognizerDelegate>
 
 @end
 
@@ -26,6 +26,10 @@
         self.title = self.navigationTitle;
     [self.view addSubview:self.wkWebView];
     [self.wkWebView addSubview:self.progressView];
+    
+    if (!self.forbidPopGestureRecognizer) {
+        self.navigationController.interactivePopGestureRecognizer.delegate = self;
+    }
 }
 
 - (void)dealloc {
@@ -69,6 +73,10 @@ NSString *const ObserVerKeyPathTitle = @"title";
         _progressView.trackTintColor = [UIColor whiteColor];
     }
     return _progressView;
+}
+- (void)setWebNavigationBarStyle:(WebNavigationBarStyle)webNavigationBarStyle {
+    _webNavigationBarStyle = webNavigationBarStyle;
+    [self setWebNavigationBar];
 }
 #pragma mark - private
 - (void)backNavigationButtonClick {
