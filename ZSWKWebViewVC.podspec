@@ -107,6 +107,7 @@ Pod::Spec.new do |s|
     s.subspec 'WKWebViewJavascriptBridge' do |jsbridge|
       jsbridge.source_files = "Classes/WKWebViewJavascriptBridge/**/*.{h,m}"
       jsbridge.dependency 'WebViewJavascriptBridge'
+      jsbridge.xcconfig = { "FRAMEWORK_SEARCH_PATHS" => "$(PODS_ROOT)/WebViewJavascriptBridge"}
       jsbridge.dependency 'ZSWKWebViewVC/Base'
     end
 
