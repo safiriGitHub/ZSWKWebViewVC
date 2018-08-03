@@ -18,8 +18,8 @@
  - StyleBack: <
  */
 typedef NS_ENUM(NSUInteger, WebNavigationBarStyle) {
-    StyleBackCloseTogether,
     StyleBackCloseSeparate,
+    StyleBackCloseTogether,
     StyleBack
 };
 
