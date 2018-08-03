@@ -13,7 +13,14 @@
 @end
 
 @implementation ZSWKWebViewVC
-
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.configStatusBarStyle = UIStatusBarStyleLightContent;
+    }
+    return self;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self configUI];
@@ -209,7 +216,18 @@ NSString *const ObserVerKeyPathTitle = @"title";
     }else {
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }
-    
-    
 }
+
+//MARK: StatusBarStyle
+- (void)setConfigStatusBarStyle:(UIStatusBarStyle)configStatusBarStyle {
+    _configStatusBarStyle = configStatusBarStyle;
+    [self setNeedsStatusBarAppearanceUpdate];
+}
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return self.configStatusBarStyle;//childViewControllerForStatusBarStyle 返回nil才起作用
+}
+- (UIViewController *)childViewControllerForStatusBarStyle {
+    return nil;
+}
+
 @end

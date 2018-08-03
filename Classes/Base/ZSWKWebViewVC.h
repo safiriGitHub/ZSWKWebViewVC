@@ -76,6 +76,12 @@ typedef NS_ENUM(NSUInteger, WebNavigationBarStyle) {
  */
 @property (nonatomic ,assign) BOOL forbidPopGestureRecognizer;
 
+/**
+ 控制状态栏颜色，默认UIStatusBarStyleLightContent
+ 前提：View controller-based status bar appearance - YES
+ */
+@property (nonatomic ,assign) UIStatusBarStyle configStatusBarStyle;
+
 @end
 
 /*
