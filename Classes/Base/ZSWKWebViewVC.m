@@ -28,6 +28,12 @@
     //开始加载
     [self starLoadRequestURL];
 }
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    self.navigationController.interactivePopGestureRecognizer.delegate = nil;
+}
+
 - (void)configUI {
     if (self.navigationTitle)
         self.title = self.navigationTitle;
