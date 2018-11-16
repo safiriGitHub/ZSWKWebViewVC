@@ -18,8 +18,8 @@
  - StyleBack: <
  */
 typedef NS_ENUM(NSUInteger, WebNavigationBarStyle) {
-    StyleBackCloseSeparate,
     StyleBackCloseTogether,
+    StyleBackCloseSeparate,
     StyleBack
 };
 
@@ -40,6 +40,11 @@ typedef NS_ENUM(NSUInteger, WebNavigationBarStyle) {
  居中显示加载失败时提示View - todo
  */
 @property (nonatomic ,strong) UIView *loadFailedHintView;
+
+/**
+ 导航栏是否透明 默认YES
+ */
+@property (nonatomic, assign) BOOL navigationBarTranslucent;
 
 // MARK: - config
 /**

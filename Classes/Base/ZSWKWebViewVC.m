@@ -18,6 +18,7 @@
     self = [super init];
     if (self) {
         self.configStatusBarStyle = UIStatusBarStyleLightContent;
+        _navigationBarTranslucent = YES;
     }
     return self;
 }
@@ -39,7 +40,7 @@
         self.title = self.navigationTitle;
     [self.view addSubview:self.wkWebView];
     [self.wkWebView addSubview:self.progressView];
-    
+    self.navigationController.navigationBar.translucent = self.navigationBarTranslucent;
     if (!self.forbidPopGestureRecognizer) {
         self.navigationController.interactivePopGestureRecognizer.delegate = self;
     }
@@ -150,7 +151,9 @@ NSString *const ObserVerKeyPathTitle = @"title";
     }
     else if (self.webNavigationBarStyle == StyleBackCloseSeparate) {
         //返回按钮用系统的
-        
+        UIImage *image1 = [[self getDefaultBundleImage:@"webNav_backItem@2x"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithImage:image1 style:UIBarButtonItemStyleDone target:self action:@selector(backNavigationButtonClick)];
+        self.navigationItem.leftBarButtonItem = backItem;
         //右侧关闭按钮：
         UIImage *image2 = [[self getDefaultBundleImage:@"webNav_closeItem@2x"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithImage:image2 style:UIBarButtonItemStyleDone target:self action:@selector(closeNavigationButtonClick)];
