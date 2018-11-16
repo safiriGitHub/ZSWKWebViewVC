@@ -82,11 +82,7 @@ NSString *const ObserVerKeyPathTitle = @"title";
 }
 - (UIProgressView *)progressView {
     if (!_progressView) {
-        CGFloat y = 0;
-        if (self.navigationController.navigationBar.translucent == YES) {
-            y = 64;
-        }
-        
+        CGFloat y = self.navigationBarTranslucent ? 64 : 0;
         _progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, y, self.view.frame.size.width, 1.5)];
         _progressView.progressTintColor = [UIColor colorWithRed:50.f / 255.f green:250.f / 245.f blue:0.f / 255.f alpha:1.0]; // 微信绿;
         _progressView.trackTintColor = [UIColor whiteColor];
