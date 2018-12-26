@@ -15,7 +15,6 @@
 		032F6B1B21096AB000DE978A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 032F6B1A21096AB000DE978A /* main.m */; };
 		032F6B2521096AFC00DE978A /* ZSWKWebViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 032F6B2421096AFC00DE978A /* ZSWKWebViewVC.m */; };
 		03BB5F9F210AF47000183642 /* ZSWKWebViewJSVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BB5F9E210AF47000183642 /* ZSWKWebViewJSVC.m */; };
-		03BB5FA2210B174900183642 /* ZSExtendWKWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BB5FA1210B174900183642 /* ZSExtendWKWebVC.m */; };
 		03BB5FA6210B247A00183642 /* ZSWKWebJSBridgeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BB5FA5210B247A00183642 /* ZSWKWebJSBridgeVC.m */; };
 		03C35CDF210EB77E00A3D1F2 /* ZSWKWebView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 03C35CDE210EB77E00A3D1F2 /* ZSWKWebView.bundle */; };
 		73C179FEEB26545C455196BE /* Pods_ZSWKWebViewVC_master.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AF2497FB74E90A9AAA2B4E /* Pods_ZSWKWebViewVC_master.framework */; };
@@ -36,8 +35,6 @@
 		032F6B2421096AFC00DE978A /* ZSWKWebViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZSWKWebViewVC.m; sourceTree = "<group>"; };
 		03BB5F9D210AF47000183642 /* ZSWKWebViewJSVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSWKWebViewJSVC.h; sourceTree = "<group>"; };
 		03BB5F9E210AF47000183642 /* ZSWKWebViewJSVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZSWKWebViewJSVC.m; sourceTree = "<group>"; };
-		03BB5FA0210B174900183642 /* ZSExtendWKWebVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSExtendWKWebVC.h; sourceTree = "<group>"; };
-		03BB5FA1210B174900183642 /* ZSExtendWKWebVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZSExtendWKWebVC.m; sourceTree = "<group>"; };
 		03BB5FA4210B247A00183642 /* ZSWKWebJSBridgeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSWKWebJSBridgeVC.h; sourceTree = "<group>"; };
 		03BB5FA5210B247A00183642 /* ZSWKWebJSBridgeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSWKWebJSBridgeVC.m; sourceTree = "<group>"; };
 		03C35CDE210EB77E00A3D1F2 /* ZSWKWebView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZSWKWebView.bundle; sourceTree = "<group>"; };
@@ -110,8 +107,6 @@
 			children = (
 				032F6B2321096AFC00DE978A /* ZSWKWebViewVC.h */,
 				032F6B2421096AFC00DE978A /* ZSWKWebViewVC.m */,
-				03BB5FA0210B174900183642 /* ZSExtendWKWebVC.h */,
-				03BB5FA1210B174900183642 /* ZSExtendWKWebVC.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -268,7 +263,6 @@
 				03BB5F9F210AF47000183642 /* ZSWKWebViewJSVC.m in Sources */,
 				03BB5FA6210B247A00183642 /* ZSWKWebJSBridgeVC.m in Sources */,
 				032F6B0D21096AAE00DE978A /* AppDelegate.m in Sources */,
-				03BB5FA2210B174900183642 /* ZSExtendWKWebVC.m in Sources */,
 				032F6B2521096AFC00DE978A /* ZSWKWebViewVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
