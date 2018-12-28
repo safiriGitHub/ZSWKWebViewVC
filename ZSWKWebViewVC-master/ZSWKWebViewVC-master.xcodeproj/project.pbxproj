@@ -17,6 +17,7 @@
 		03BB5F9F210AF47000183642 /* ZSWKWebViewJSVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BB5F9E210AF47000183642 /* ZSWKWebViewJSVC.m */; };
 		03BB5FA6210B247A00183642 /* ZSWKWebJSBridgeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BB5FA5210B247A00183642 /* ZSWKWebJSBridgeVC.m */; };
 		03C35CDF210EB77E00A3D1F2 /* ZSWKWebView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 03C35CDE210EB77E00A3D1F2 /* ZSWKWebView.bundle */; };
+		03C3DA2021D5CC7400132B6E /* ZSXfywWebViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C3DA1F21D5CC7300132B6E /* ZSXfywWebViewVC.m */; };
 		73C179FEEB26545C455196BE /* Pods_ZSWKWebViewVC_master.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AF2497FB74E90A9AAA2B4E /* Pods_ZSWKWebViewVC_master.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,8 @@
 		03BB5FA4210B247A00183642 /* ZSWKWebJSBridgeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSWKWebJSBridgeVC.h; sourceTree = "<group>"; };
 		03BB5FA5210B247A00183642 /* ZSWKWebJSBridgeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSWKWebJSBridgeVC.m; sourceTree = "<group>"; };
 		03C35CDE210EB77E00A3D1F2 /* ZSWKWebView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZSWKWebView.bundle; sourceTree = "<group>"; };
+		03C3DA1E21D5CC7300132B6E /* ZSXfywWebViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSXfywWebViewVC.h; sourceTree = "<group>"; };
+		03C3DA1F21D5CC7300132B6E /* ZSXfywWebViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSXfywWebViewVC.m; sourceTree = "<group>"; };
 		11AF2497FB74E90A9AAA2B4E /* Pods_ZSWKWebViewVC_master.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZSWKWebViewVC_master.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A944E34CA06011DA102C8924 /* Pods-ZSWKWebViewVC-master.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZSWKWebViewVC-master.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZSWKWebViewVC-master/Pods-ZSWKWebViewVC-master.release.xcconfig"; sourceTree = "<group>"; };
 		CC5CD07C248C538817A16C4B /* Pods-ZSWKWebViewVC-master.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZSWKWebViewVC-master.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZSWKWebViewVC-master/Pods-ZSWKWebViewVC-master.debug.xcconfig"; sourceTree = "<group>"; };
@@ -77,6 +80,8 @@
 		032F6B0A21096AAE00DE978A /* ZSWKWebViewVC-master */ = {
 			isa = PBXGroup;
 			children = (
+				03C3DA1E21D5CC7300132B6E /* ZSXfywWebViewVC.h */,
+				03C3DA1F21D5CC7300132B6E /* ZSXfywWebViewVC.m */,
 				032F6B0B21096AAE00DE978A /* AppDelegate.h */,
 				032F6B0C21096AAE00DE978A /* AppDelegate.m */,
 				032F6B0E21096AAE00DE978A /* ViewController.h */,
@@ -260,6 +265,7 @@
 			files = (
 				032F6B1021096AAE00DE978A /* ViewController.m in Sources */,
 				032F6B1B21096AB000DE978A /* main.m in Sources */,
+				03C3DA2021D5CC7400132B6E /* ZSXfywWebViewVC.m in Sources */,
 				03BB5F9F210AF47000183642 /* ZSWKWebViewJSVC.m in Sources */,
 				03BB5FA6210B247A00183642 /* ZSWKWebJSBridgeVC.m in Sources */,
 				032F6B0D21096AAE00DE978A /* AppDelegate.m in Sources */,

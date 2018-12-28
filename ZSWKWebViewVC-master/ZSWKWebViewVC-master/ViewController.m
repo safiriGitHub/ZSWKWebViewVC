@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "ZSWKWebViewVC.h"
-
+#import "ZSXfywWebViewVC.h"
 
 #import <SafariServices/SafariServices.h>
 
@@ -31,8 +31,8 @@
     //webViewVC.requestURL = @"http://pay.egintra.com:8080/tuiguang/start.html";
     //webViewVC.requestURL = @"https://siteapp.news18a.com/m/price/select_brands/brand/?ina_from=weizhangjiaofeiyi";
     //webViewVC.requestURL = @"https://mp.weixin.qq.com/s?__biz=MzU5MjMwMjQyMg==&mid=100000844&idx=1&sn=1de825be1a2c6e95713371d3259e2312&chksm=7e209c754957156320c161b95174980fb0e3afc27d4fc4321396e404ac32c7a5180469b78caf#rd";
-    webViewVC.requestURL = @"http://222.218.31.20:8765/apui/xfyewu/92";
-    
+    //webViewVC.requestURL = @"http://222.218.31.20:8765/apui/xfyewu/92";
+    webViewVC.requestURL = @"http://222.218.31.20:8765/apui/onlineClass/toOnlineClass";
     webViewVC.navigationBarTranslucent = NO;
     webViewVC.webNavigationBarStyle = StyleBackCloseSeparate;
     [self.navigationController pushViewController:webViewVC animated:YES];
@@ -45,6 +45,16 @@
 //    } else {
 //        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://222.218.31.20:8765/apui/xfyewu/92"]];
 //    }
+}
+- (IBAction)test2Click:(id)sender {
+    
+    ZSXfywWebViewVC *webViewVC = [[ZSXfywWebViewVC alloc] init];
+    
+    webViewVC.requestURL = @"http://222.218.31.20:8765/apui/onlineClass/toOnlineClass";
+    webViewVC.navigationBarTranslucent = NO;
+    webViewVC.webNavigationBarStyle = StyleBackCloseSeparate;
+    [self.navigationController pushViewController:webViewVC animated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning {

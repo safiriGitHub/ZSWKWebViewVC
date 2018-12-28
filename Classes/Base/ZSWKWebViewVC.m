@@ -178,7 +178,7 @@ NSString *const ObserVerKeyPathTitle = @"title";
     }
 }
 - (UIImage *)getDefaultBundleImage:(NSString *)imageName {
-    NSBundle *bundle = [NSBundle bundleWithPath:[[NSBundle bundleForClass:[self class]] pathForResource:@"ZSWKWebView" ofType:@"bundle"]];
+    NSBundle *bundle = [NSBundle bundleWithPath:[[NSBundle bundleForClass:[ZSWKWebViewVC class]] pathForResource:@"ZSWKWebView" ofType:@"bundle"]];
     NSString *path = [bundle pathForResource:imageName ofType:@"png"];
     return [UIImage imageWithContentsOfFile:path];
 }
@@ -325,7 +325,7 @@ NSString *const ObserVerKeyPathTitle = @"title";
 - (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler {
     
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:self.jsAlertTitle message:message preferredStyle:UIAlertControllerStyleAlert];
-    [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         completionHandler();
     }]];
     [self presentViewController:alert animated:YES completion:nil];

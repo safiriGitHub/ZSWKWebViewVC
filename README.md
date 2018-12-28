@@ -5,6 +5,8 @@ WKWebView 常用功能封装
 
 0.0.8: 删除`ZSExtendWKWebVC`类, 改由 ZSWKWebViewVC 处理 `WKNavigationDelegate, WKUIDelegate` 代理方法
 
+0.0.9: fix some bug
+
 #### 安装教程
 
 pod 'ZSWKWebViewVC'
