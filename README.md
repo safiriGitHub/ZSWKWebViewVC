@@ -9,6 +9,9 @@ WKWebView 常用功能封装
 
 0.1.0: 添加 ZSWKWebViewVC 是否使用已经封装好的代理逻辑代码功能
 
+0.1.1: 添加 ZSDefaultDelegateVC 类，封装默认的处理代理逻辑的代码
+
+
 #### 安装教程
 
 pod 'ZSWKWebViewVC'
