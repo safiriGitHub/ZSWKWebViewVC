@@ -81,8 +81,6 @@ NSString *const ObserVerKeyPathTitle = @"title";
         [_wkWebView addObserver:self forKeyPath:ObserVerKeyPathTitle options:NSKeyValueObservingOptionNew context:NULL];
         //开启手势触摸
         _wkWebView.allowsBackForwardNavigationGestures = YES;
-        _wkWebView.navigationDelegate = self;
-        _wkWebView.UIDelegate = self;
     }
     return _wkWebView;
 }
@@ -99,7 +97,22 @@ NSString *const ObserVerKeyPathTitle = @"title";
     _webNavigationBarStyle = webNavigationBarStyle;
     [self setWebNavigationBar];
 }
-
+- (void)setIsOpenNavigationDelegate:(BOOL)isOpenNavigationDelegate {
+    _isOpenNavigationDelegate = isOpenNavigationDelegate;
+    if (isOpenNavigationDelegate) {
+        self.wkWebView.navigationDelegate = self;
+    }else {
+        self.wkWebView.navigationDelegate = nil;
+    }
+}
+- (void)setIsOpenUIDelegate:(BOOL)isOpenUIDelegate {
+    _isOpenUIDelegate = isOpenUIDelegate;
+    if (isOpenUIDelegate) {
+        self.wkWebView.UIDelegate = self;
+    }else {
+        self.wkWebView.UIDelegate = nil;
+    }
+}
 + (WKWebViewConfiguration *)commonWKWebViewConfiguration {
     //初始化一个WKWebViewConfiguration对象
     WKWebViewConfiguration *config = [WKWebViewConfiguration new];

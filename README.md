@@ -7,6 +7,8 @@ WKWebView 常用功能封装
 
 0.0.9: fix some bug
 
+0.1.0: 添加 ZSWKWebViewVC 是否使用已经封装好的代理逻辑代码功能
+
 #### 安装教程
 
 pod 'ZSWKWebViewVC'

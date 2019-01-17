@@ -101,6 +101,17 @@ typedef NS_ENUM(NSUInteger, WebNavigationBarStyle) {
 @property (nonatomic ,assign) UIStatusBarStyle configStatusBarStyle;
 
 // MARK: - delegate
+
+/**
+ 是否开启已经封装的NavigationDelegate处理逻辑，默认NO
+ */
+@property (nonatomic, assign) BOOL isOpenNavigationDelegate;
+
+/**
+ 是否开启已经封装的UIDelegate处理逻辑，默认NO
+ */
+@property (nonatomic, assign) BOOL isOpenUIDelegate;
+
 /**
  是否关闭识别电话 默认NO
  */
