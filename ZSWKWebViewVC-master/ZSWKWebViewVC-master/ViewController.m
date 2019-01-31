@@ -34,7 +34,7 @@
     //webViewVC.requestURL = @"http://222.218.31.20:8765/apui/xfyewu/92";
     //webViewVC.requestURL = @"http://222.218.31.20:8765/apui/onlineClass/toOnlineClass";
     webViewVC.requestURL = @"https://product.haibaobaoxian.com/index?pcode=weizjfy-h5-all&version=testb";
-    webViewVC.navigationBarTranslucent = NO;
+    webViewVC.navigationBarTranslucent = YES;
     webViewVC.webNavigationBarStyle = StyleBackCloseSeparate;
     [self.navigationController pushViewController:webViewVC animated:YES];
 

@@ -71,10 +71,14 @@ NSString *const ObserVerKeyPathEstimatedProgress = @"estimatedProgress";
 NSString *const ObserVerKeyPathTitle = @"title";
 - (WKWebView *)wkWebView {
     if (!_wkWebView) {
+        CGRect frame = self.view.bounds;
+        if (!self.navigationBarTranslucent) {
+            frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - 64);
+        }
         if (self.configurationForInit) {
-            _wkWebView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - 64) configuration:self.configurationForInit];
+            _wkWebView = [[WKWebView alloc] initWithFrame:frame configuration:self.configurationForInit];
         }else {
-            _wkWebView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - 64)];
+            _wkWebView = [[WKWebView alloc] initWithFrame:frame];
         }
         
         [_wkWebView addObserver:self forKeyPath:ObserVerKeyPathEstimatedProgress options:NSKeyValueObservingOptionNew context:NULL];
