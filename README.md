@@ -11,7 +11,7 @@ WKWebView 常用功能封装
 
 0.1.1: 添加 ZSDefaultDelegateVC 类，封装默认的处理代理逻辑的代码
 
-0.1.2: 修改 WKWebView h5页面显示不全问题
+0.1.2/0.1.3: 修改 WKWebView h5页面显示不全问题
 
 #### 安装教程
 

@@ -40,9 +40,7 @@
     [self.view addSubview:self.wkWebView];
     [self.wkWebView addSubview:self.progressView];
     self.navigationController.navigationBar.translucent = self.navigationBarTranslucent;
-    if (!self.navigationBarTranslucent) {
-        self.edgesForExtendedLayout = UIRectEdgeNone;
-    }
+    
     if (!self.forbidPopGestureRecognizer) {
         self.navigationController.interactivePopGestureRecognizer.delegate = self;
     }
@@ -74,9 +72,9 @@ NSString *const ObserVerKeyPathTitle = @"title";
 - (WKWebView *)wkWebView {
     if (!_wkWebView) {
         if (self.configurationForInit) {
-            _wkWebView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:self.configurationForInit];
+            _wkWebView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - 64) configuration:self.configurationForInit];
         }else {
-            _wkWebView = [[WKWebView alloc] initWithFrame:self.view.bounds];
+            _wkWebView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - 64)];
         }
         
         [_wkWebView addObserver:self forKeyPath:ObserVerKeyPathEstimatedProgress options:NSKeyValueObservingOptionNew context:NULL];
