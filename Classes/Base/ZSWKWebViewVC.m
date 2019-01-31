@@ -18,7 +18,6 @@
     self = [super init];
     if (self) {
         self.configStatusBarStyle = UIStatusBarStyleLightContent;
-        _navigationBarTranslucent = YES;
     }
     return self;
 }
@@ -41,6 +40,9 @@
     [self.view addSubview:self.wkWebView];
     [self.wkWebView addSubview:self.progressView];
     self.navigationController.navigationBar.translucent = self.navigationBarTranslucent;
+    if (!self.navigationBarTranslucent) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
     if (!self.forbidPopGestureRecognizer) {
         self.navigationController.interactivePopGestureRecognizer.delegate = self;
     }
