@@ -47,8 +47,11 @@
 }
 
 - (void)dealloc {
-    [self.wkWebView removeObserver:self forKeyPath:ObserVerKeyPathEstimatedProgress context:nil];
-    [self.wkWebView removeObserver:self forKeyPath:ObserVerKeyPathTitle context:nil];
+    if (_wkWebView) {
+        [_wkWebView removeObserver:self forKeyPath:ObserVerKeyPathEstimatedProgress context:nil];
+        [_wkWebView removeObserver:self forKeyPath:ObserVerKeyPathTitle context:nil];
+    }
+    
     if (self.allowCleanCacheAndCookie) {
         [self cleanCacheAndCookie];
     }

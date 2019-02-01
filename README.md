@@ -13,6 +13,9 @@ WKWebView 常用功能封装
 
 0.1.2/0.1.3: 修改 WKWebView h5页面显示不全问题
 
+0.1.4: 修改dealloc中的bug self.webView -> _webview
+
+
 #### 安装教程
 
 pod 'ZSWKWebViewVC'
