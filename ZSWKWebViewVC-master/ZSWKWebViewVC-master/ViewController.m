@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "ZSWKWebViewVC.h"
-#import "ZSXfywWebViewVC.h"
+#import "ZSWKWebViewPayVC.h"
 
 #import <SafariServices/SafariServices.h>
 
@@ -49,11 +49,16 @@
 }
 - (IBAction)test2Click:(id)sender {
     
-    ZSXfywWebViewVC *webViewVC = [[ZSXfywWebViewVC alloc] init];
     
-    webViewVC.requestURL = @"http://222.218.31.20:8765/apui/onlineClass/toOnlineClass";
-    webViewVC.navigationBarTranslucent = NO;
+}
+- (IBAction)payTestClick:(id)sender {
+    ZSWKWebViewPayVC *webViewVC = [[ZSWKWebViewPayVC alloc] init];
+    webViewVC.requestURL = @"http://o2o.hks360.com/?channelCode=wzjfy";
+    //账户 18676836071 密码 hks123
+    webViewVC.navigationBarTranslucent = YES;
     webViewVC.webNavigationBarStyle = StyleBackCloseSeparate;
+    webViewVC.aliPayScheme = @"aliPayhks360";
+    webViewVC.wxPayScheme = @"demo.o2o.hks360.com://";
     [self.navigationController pushViewController:webViewVC animated:YES];
     
 }

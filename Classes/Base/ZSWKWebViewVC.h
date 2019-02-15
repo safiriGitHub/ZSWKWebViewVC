@@ -100,22 +100,27 @@ typedef NS_ENUM(NSUInteger, WebNavigationBarStyle) {
  */
 @property (nonatomic ,assign) UIStatusBarStyle configStatusBarStyle;
 
-// MARK: - delegate
+// MARK: - pop Or dismiss / alert config
 
 /**
- JS调用alert函数自定义标题,默认：温馨提示
+ 值为：pop还是dismiss
  */
-@property (nonatomic, strong) NSString *jsAlertTitle;
+@property (nonatomic, copy) NSString *popOrDismiss;
 
 /**
- JS调用confirm函数自定义标题,默认：温馨提示
+ 当pop或dismiss时是否提示，默认NO不提示
  */
-@property (nonatomic, strong) NSString *jsConfirmTitle;
+@property (nonatomic, assign) BOOL isHintBack;
 
 /**
- JS调用prompt函数自定义标题,默认：温馨提示
+ alert标题，isHintBack为YES时需要配置
  */
-@property (nonatomic, strong) NSString *jsTextInputTitle;
+@property (nonatomic, copy) NSString *alertTitle;
+
+/**
+ alert内容，isHintBack为YES时需要配置
+ */
+@property (nonatomic, copy) NSString *alertMessage;
 
 @end
 

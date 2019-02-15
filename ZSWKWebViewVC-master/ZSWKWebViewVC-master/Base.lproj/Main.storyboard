@@ -46,11 +46,19 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhw-SJ-P82">
-                                <rect key="frame" x="178" y="251" width="46" height="17"/>
+                                <rect key="frame" x="178" y="194" width="46" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="test2"/>
                                 <connections>
                                     <action selector="test2Click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zhF-zE-O7G"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rSn-35-nu3">
+                                <rect key="frame" x="175" y="259" width="53" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="payTest"/>
+                                <connections>
+                                    <action selector="payTestClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B9I-4F-wS2"/>
                                 </connections>
                             </button>
                         </subviews>

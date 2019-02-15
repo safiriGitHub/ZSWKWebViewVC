@@ -124,12 +124,32 @@ NSString *const ObserVerKeyPathTitle = @"title";
     if (self.wkWebView.canGoBack) {
         [self.wkWebView goBack];
     }else {
-        [self.navigationController popViewControllerAnimated:YES];
+        [self hintBack];
     }
 }
 
 - (void)closeNavigationButtonClick {
-    [self.navigationController popViewControllerAnimated:YES];
+    [self hintBack];
+}
+
+- (void)hintBack {
+    if (self.isHintBack) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:self.alertTitle message:self.alertMessage preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+            [self popOrDismiss];
+        }]];
+        [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+        [self presentViewController:alert animated:YES completion:nil];
+    }else {
+        [self popOrDismiss];
+    }
+}
+- (void)popOrDismissBack {
+    if ([self.popOrDismiss isEqualToString:@"pop"]) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }else if ([self.popOrDismiss isEqualToString:@"dismiss"]) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 
 - (void)setWebNavigationBar {
@@ -248,25 +268,7 @@ NSString *const ObserVerKeyPathTitle = @"title";
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }
 }
-//MARK: getters
-- (NSString *)jsAlertTitle {
-    if (!_jsAlertTitle) {
-        _jsAlertTitle = @"温馨提示";
-    }
-    return _jsAlertTitle;
-}
-- (NSString *)jsConfirmTitle {
-    if (!_jsConfirmTitle) {
-        _jsConfirmTitle = @"温馨提示";
-    }
-    return _jsConfirmTitle;
-}
-- (NSString *)jsTextInputTitle {
-    if (!_jsTextInputTitle) {
-        _jsTextInputTitle = @"温馨提示";
-    }
-    return _jsTextInputTitle;
-}
+
 
 //MARK: StatusBarStyle
 - (void)setConfigStatusBarStyle:(UIStatusBarStyle)configStatusBarStyle {

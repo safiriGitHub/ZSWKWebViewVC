@@ -27,6 +27,21 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic ,assign) BOOL closeRecognizePhone;
 
+/**
+ JS调用alert函数自定义标题,默认：温馨提示
+ */
+@property (nonatomic, strong) NSString *jsAlertTitle;
+
+/**
+ JS调用confirm函数自定义标题,默认：温馨提示
+ */
+@property (nonatomic, strong) NSString *jsConfirmTitle;
+
+/**
+ JS调用prompt函数自定义标题,默认：温馨提示
+ */
+@property (nonatomic, strong) NSString *jsTextInputTitle;
+
 @end
 
 NS_ASSUME_NONNULL_END

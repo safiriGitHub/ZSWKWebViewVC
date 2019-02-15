@@ -153,6 +153,26 @@
     }]];
     
     [self presentViewController:alert animated:YES completion:NULL];
-    
 }
+
+//MARK: getters
+- (NSString *)jsAlertTitle {
+    if (!_jsAlertTitle) {
+        _jsAlertTitle = @"温馨提示";
+    }
+    return _jsAlertTitle;
+}
+- (NSString *)jsConfirmTitle {
+    if (!_jsConfirmTitle) {
+        _jsConfirmTitle = @"温馨提示";
+    }
+    return _jsConfirmTitle;
+}
+- (NSString *)jsTextInputTitle {
+    if (!_jsTextInputTitle) {
+        _jsTextInputTitle = @"温馨提示";
+    }
+    return _jsTextInputTitle;
+}
+
 @end
