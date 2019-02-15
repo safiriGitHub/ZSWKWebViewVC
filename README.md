@@ -15,9 +15,10 @@ WKWebView 常用功能封装
 
 0.1.4: 修改dealloc中的bug `self.webView -> _webview`
 
-0.1.5: - 删除无用代码；
-	   - 添加页面Back消失时，pop或者dismiss形式，及是否弹框提示、弹框配置；
-	   - 添加ZSWKWebViewPayVC类，添加支付宝、微信H5支付功能及相关适配
+0.1.5:
+ - 删除无用代码；
+ - 添加页面Back消失时，pop或者dismiss形式，及是否弹框提示、弹框配置；
+ - 添加ZSWKWebViewPayVC类，添加支付宝、微信H5支付功能及相关适配
 
 #### 安装教程
 
@@ -28,6 +29,8 @@ pod 'ZSWKWebViewVC/Base'
 pod 'ZSWKWebViewVC/WKWebViewJavaScript'
 
 pod 'ZSWKWebViewVC/WKWebViewJavascriptBridge'
+
+pod 'ZSWKWebViewVC/WKWebViewPay'
 
 #### 参与贡献
 
