@@ -20,6 +20,9 @@ WKWebView 常用功能封装
  - 添加页面Back消失时，pop或者dismiss形式，及是否弹框提示、弹框配置；
  - 添加ZSWKWebViewPayVC类，添加支付宝、微信H5支付功能及相关适配
 
+0.1.6: 添加 `WebBackStyle backStyle` 属性
+
+
 #### 安装教程
 
 pod 'ZSWKWebViewVC'

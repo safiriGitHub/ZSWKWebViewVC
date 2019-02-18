@@ -136,18 +136,18 @@ NSString *const ObserVerKeyPathTitle = @"title";
     if (self.isHintBack) {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:self.alertTitle message:self.alertMessage preferredStyle:UIAlertControllerStyleAlert];
         [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-            [self popOrDismiss];
+            [self popOrDismissBack];
         }]];
         [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
         [self presentViewController:alert animated:YES completion:nil];
     }else {
-        [self popOrDismiss];
+        [self popOrDismissBack];
     }
 }
 - (void)popOrDismissBack {
-    if ([self.popOrDismiss isEqualToString:@"pop"]) {
+    if (self.backStyle == BackStylePop) {
         [self.navigationController popViewControllerAnimated:YES];
-    }else if ([self.popOrDismiss isEqualToString:@"dismiss"]) {
+    }else if (self.backStyle == BackStyleDismiss) {
         [self dismissViewControllerAnimated:YES completion:nil];
     }
 }

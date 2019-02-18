@@ -23,6 +23,11 @@ typedef NS_ENUM(NSUInteger, WebNavigationBarStyle) {
     StyleBack
 };
 
+typedef NS_ENUM(NSUInteger, WebBackStyle) {
+    BackStylePop,
+    BackStyleDismiss
+};
+
 @interface ZSWKWebViewVC : UIViewController
 // MARK: - Init
 
@@ -103,9 +108,9 @@ typedef NS_ENUM(NSUInteger, WebNavigationBarStyle) {
 // MARK: - pop Or dismiss / alert config
 
 /**
- 值为：pop还是dismiss
+ 本VC返回时pop还是dismiss，默认pop
  */
-@property (nonatomic, copy) NSString *popOrDismiss;
+@property (nonatomic, assign) WebBackStyle backStyle;
 
 /**
  当pop或dismiss时是否提示，默认NO不提示
