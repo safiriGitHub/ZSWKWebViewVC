@@ -1,40 +1,38 @@
 //
-//  ZSDefaultDelegateVC.m
+//  ZSWkWebViewDelegateVC.m
 //  ZSWKWebViewVC-master
 //
 //  Created by safiri on 2019/1/17.
 //  Copyright © 2019 safiri. All rights reserved.
 //
 
-#import "ZSDefaultDelegateVC.h"
+#import "ZSWkWebViewDelegateVC.h"
 
-@interface ZSDefaultDelegateVC ()
+@interface ZSWkWebViewDelegateVC ()
 
 @end
 
-@implementation ZSDefaultDelegateVC
+@implementation ZSWkWebViewDelegateVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    if (self.isOpenNavigationDelegate) {
+        self.wkWebView.navigationDelegate = self;
+    }
+    if (self.isOpenUIDelegate) {
+        self.wkWebView.UIDelegate = self;
+    }
+}
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
 }
 
-- (void)setIsOpenNavigationDelegate:(BOOL)isOpenNavigationDelegate {
-    _isOpenNavigationDelegate = isOpenNavigationDelegate;
-    if (isOpenNavigationDelegate) {
-        self.wkWebView.navigationDelegate = self;
-    }else {
-        self.wkWebView.navigationDelegate = nil;
-    }
-}
-- (void)setIsOpenUIDelegate:(BOOL)isOpenUIDelegate {
-    _isOpenUIDelegate = isOpenUIDelegate;
-    if (isOpenUIDelegate) {
-        self.wkWebView.UIDelegate = self;
-    }else {
-        self.wkWebView.UIDelegate = nil;
-    }
-}
 
 // MARK: - delegate
 // MARK: WKNavigationDelegate
@@ -104,7 +102,16 @@
 
 // 这与用于授权验证的API，与AFN、UIWebView的授权验证API是一样的
 - (void)webView:(WKWebView *)webView didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition disposition, NSURLCredential *__nullable credential))completionHandler {
-    
+    if ([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust]) {
+        if ([challenge previousFailureCount] == 0) {
+            NSURLCredential *credential = [NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust];
+            completionHandler(NSURLSessionAuthChallengeUseCredential, credential);
+        } else {
+            completionHandler(NSURLSessionAuthChallengeCancelAuthenticationChallenge, nil);
+        }
+    } else {
+        completionHandler(NSURLSessionAuthChallengeCancelAuthenticationChallenge, nil);
+    }
 }
 
 // 当web content处理完成时，会回调

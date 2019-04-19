@@ -15,7 +15,7 @@
 		032F6B1821096AB000DE978A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 032F6B1621096AB000DE978A /* LaunchScreen.storyboard */; };
 		032F6B1B21096AB000DE978A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 032F6B1A21096AB000DE978A /* main.m */; };
 		032F6B2521096AFC00DE978A /* ZSWKWebViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 032F6B2421096AFC00DE978A /* ZSWKWebViewVC.m */; };
-		0383D3FD21F08264001E9A79 /* ZSDefaultDelegateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0383D3FC21F08264001E9A79 /* ZSDefaultDelegateVC.m */; };
+		0383D3FD21F08264001E9A79 /* ZSWkWebViewDelegateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0383D3FC21F08264001E9A79 /* ZSWkWebViewDelegateVC.m */; };
 		03BB5F9F210AF47000183642 /* ZSWKWebViewJSVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BB5F9E210AF47000183642 /* ZSWKWebViewJSVC.m */; };
 		03BB5FA6210B247A00183642 /* ZSWKWebJSBridgeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BB5FA5210B247A00183642 /* ZSWKWebJSBridgeVC.m */; };
 		03C35CDF210EB77E00A3D1F2 /* ZSWKWebView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 03C35CDE210EB77E00A3D1F2 /* ZSWKWebView.bundle */; };
@@ -37,8 +37,8 @@
 		032F6B1A21096AB000DE978A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		032F6B2321096AFC00DE978A /* ZSWKWebViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSWKWebViewVC.h; sourceTree = "<group>"; };
 		032F6B2421096AFC00DE978A /* ZSWKWebViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZSWKWebViewVC.m; sourceTree = "<group>"; };
-		0383D3FB21F08264001E9A79 /* ZSDefaultDelegateVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSDefaultDelegateVC.h; sourceTree = "<group>"; };
-		0383D3FC21F08264001E9A79 /* ZSDefaultDelegateVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZSDefaultDelegateVC.m; sourceTree = "<group>"; };
+		0383D3FB21F08264001E9A79 /* ZSWkWebViewDelegateVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSWkWebViewDelegateVC.h; sourceTree = "<group>"; };
+		0383D3FC21F08264001E9A79 /* ZSWkWebViewDelegateVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZSWkWebViewDelegateVC.m; sourceTree = "<group>"; };
 		03BB5F9D210AF47000183642 /* ZSWKWebViewJSVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSWKWebViewJSVC.h; sourceTree = "<group>"; };
 		03BB5F9E210AF47000183642 /* ZSWKWebViewJSVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZSWKWebViewJSVC.m; sourceTree = "<group>"; };
 		03BB5FA4210B247A00183642 /* ZSWKWebJSBridgeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSWKWebJSBridgeVC.h; sourceTree = "<group>"; };
@@ -123,8 +123,8 @@
 			children = (
 				032F6B2321096AFC00DE978A /* ZSWKWebViewVC.h */,
 				032F6B2421096AFC00DE978A /* ZSWKWebViewVC.m */,
-				0383D3FB21F08264001E9A79 /* ZSDefaultDelegateVC.h */,
-				0383D3FC21F08264001E9A79 /* ZSDefaultDelegateVC.m */,
+				0383D3FB21F08264001E9A79 /* ZSWkWebViewDelegateVC.h */,
+				0383D3FC21F08264001E9A79 /* ZSWkWebViewDelegateVC.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -282,7 +282,7 @@
 				03BB5FA6210B247A00183642 /* ZSWKWebJSBridgeVC.m in Sources */,
 				032F6B0D21096AAE00DE978A /* AppDelegate.m in Sources */,
 				03078EE9221660B600783E3C /* ZSWKWebViewPayVC.m in Sources */,
-				0383D3FD21F08264001E9A79 /* ZSDefaultDelegateVC.m in Sources */,
+				0383D3FD21F08264001E9A79 /* ZSWkWebViewDelegateVC.m in Sources */,
 				032F6B2521096AFC00DE978A /* ZSWKWebViewVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

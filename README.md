@@ -22,6 +22,8 @@ WKWebView 常用功能封装
 
 0.1.6: 添加 `WebBackStyle backStyle` 属性
 
+0.1.8: 优化 `ZSWkWebViewDelegateVC`类，提供常用代理方法实现
+
 
 #### 安装教程
 

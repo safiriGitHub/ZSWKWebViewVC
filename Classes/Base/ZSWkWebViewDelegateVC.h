@@ -1,5 +1,5 @@
 //
-//  ZSDefaultDelegateVC.h
+//  ZSWkWebViewDelegateVC.h
 //  ZSWKWebViewVC-master
 //
 //  Created by safiri on 2019/1/17.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ZSDefaultDelegateVC : ZSWKWebViewVC<WKNavigationDelegate, WKUIDelegate>
+@interface ZSWkWebViewDelegateVC : ZSWKWebViewVC<WKNavigationDelegate, WKUIDelegate>
 
 /**
  是否开启已经封装的NavigationDelegate处理逻辑，默认NO
