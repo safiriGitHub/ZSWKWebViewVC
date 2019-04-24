@@ -24,6 +24,8 @@ WKWebView 常用功能封装
 
 0.1.8: 优化 `ZSWkWebViewDelegateVC`类，提供常用代理方法实现
 
+0.1.9: 合并ZSWkWebViewDelegateVC 到 ZSWKWebViewVC
+
 
 #### 安装教程
 

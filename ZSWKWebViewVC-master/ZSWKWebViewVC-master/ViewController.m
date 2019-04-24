@@ -9,7 +9,6 @@
 #import "ViewController.h"
 #import "ZSWKWebViewVC.h"
 #import "ZSWKWebViewPayVC.h"
-#import "ZSWkWebViewDelegateVC.h"
 
 #import <SafariServices/SafariServices.h>
 
@@ -50,7 +49,7 @@
 //    }
 }
 - (IBAction)test2Click:(id)sender {
-    ZSWkWebViewDelegateVC *webViewVC = [[ZSWkWebViewDelegateVC alloc] init];
+    ZSWKWebViewVC *webViewVC = [[ZSWKWebViewVC alloc] init];
     webViewVC.requestURL = @"http://222.218.31.20:6701/mobile/main/Login/ssjc.jsp?sysUserId=1000123";
     webViewVC.isOpenNavigationDelegate = YES;
     webViewVC.navigationBarTranslucent = YES;
