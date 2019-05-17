@@ -257,7 +257,7 @@ NSString *const ObserVerKeyPathTitle = @"title";
                 self.progressView.progress = self.wkWebView.estimatedProgress;
             }
         }
-        else{
+        else {
             [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
         }
     }
@@ -438,4 +438,11 @@ NSString *const ObserVerKeyPathTitle = @"title";
     return _jsTextInputTitle;
 }
 
+// MARK: - WKWebViewJavascriptBridge js交互
+- (WKWebViewJavascriptBridge *)javascriptBridge {
+    if (!_javascriptBridge) {
+        _javascriptBridge = [WKWebViewJavascriptBridge bridgeForWebView:self.wkWebView];
+    }
+    return _javascriptBridge;
+}
 @end

@@ -26,6 +26,8 @@ WKWebView 常用功能封装
 
 0.1.9: 合并ZSWkWebViewDelegateVC 到 ZSWKWebViewVC
 
+0.2.0: 合并ZSWKWebJSBridgeVC 到 ZSWKWebViewVC
+
 
 #### 安装教程
 

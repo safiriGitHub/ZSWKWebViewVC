@@ -16,7 +16,6 @@
 		032F6B1B21096AB000DE978A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 032F6B1A21096AB000DE978A /* main.m */; };
 		032F6B2521096AFC00DE978A /* ZSWKWebViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 032F6B2421096AFC00DE978A /* ZSWKWebViewVC.m */; };
 		03BB5F9F210AF47000183642 /* ZSWKWebViewJSVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BB5F9E210AF47000183642 /* ZSWKWebViewJSVC.m */; };
-		03BB5FA6210B247A00183642 /* ZSWKWebJSBridgeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BB5FA5210B247A00183642 /* ZSWKWebJSBridgeVC.m */; };
 		03C35CDF210EB77E00A3D1F2 /* ZSWKWebView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 03C35CDE210EB77E00A3D1F2 /* ZSWKWebView.bundle */; };
 		73C179FEEB26545C455196BE /* Pods_ZSWKWebViewVC_master.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AF2497FB74E90A9AAA2B4E /* Pods_ZSWKWebViewVC_master.framework */; };
 /* End PBXBuildFile section */
@@ -38,8 +37,6 @@
 		032F6B2421096AFC00DE978A /* ZSWKWebViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZSWKWebViewVC.m; sourceTree = "<group>"; };
 		03BB5F9D210AF47000183642 /* ZSWKWebViewJSVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSWKWebViewJSVC.h; sourceTree = "<group>"; };
 		03BB5F9E210AF47000183642 /* ZSWKWebViewJSVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZSWKWebViewJSVC.m; sourceTree = "<group>"; };
-		03BB5FA4210B247A00183642 /* ZSWKWebJSBridgeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSWKWebJSBridgeVC.h; sourceTree = "<group>"; };
-		03BB5FA5210B247A00183642 /* ZSWKWebJSBridgeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSWKWebJSBridgeVC.m; sourceTree = "<group>"; };
 		03C35CDE210EB77E00A3D1F2 /* ZSWKWebView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZSWKWebView.bundle; sourceTree = "<group>"; };
 		11AF2497FB74E90A9AAA2B4E /* Pods_ZSWKWebViewVC_master.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZSWKWebViewVC_master.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A944E34CA06011DA102C8924 /* Pods-ZSWKWebViewVC-master.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZSWKWebViewVC-master.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZSWKWebViewVC-master/Pods-ZSWKWebViewVC-master.release.xcconfig"; sourceTree = "<group>"; };
@@ -106,7 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				03078EE622165B8D00783E3C /* WKWebViewPay */,
-				03BB5FA3210B244200183642 /* WKWebViewJavascriptBridge */,
 				03BB5F9C210AF40D00183642 /* WKWebViewJavaScript */,
 				032F6B2221096AD000DE978A /* Base */,
 				03C35CDE210EB77E00A3D1F2 /* ZSWKWebView.bundle */,
@@ -131,15 +127,6 @@
 				03BB5F9E210AF47000183642 /* ZSWKWebViewJSVC.m */,
 			);
 			path = WKWebViewJavaScript;
-			sourceTree = "<group>";
-		};
-		03BB5FA3210B244200183642 /* WKWebViewJavascriptBridge */ = {
-			isa = PBXGroup;
-			children = (
-				03BB5FA4210B247A00183642 /* ZSWKWebJSBridgeVC.h */,
-				03BB5FA5210B247A00183642 /* ZSWKWebJSBridgeVC.m */,
-			);
-			path = WKWebViewJavascriptBridge;
 			sourceTree = "<group>";
 		};
 		5B86992E0581B1757F5C7CD2 /* Frameworks */ = {
@@ -274,7 +261,6 @@
 				032F6B1021096AAE00DE978A /* ViewController.m in Sources */,
 				032F6B1B21096AB000DE978A /* main.m in Sources */,
 				03BB5F9F210AF47000183642 /* ZSWKWebViewJSVC.m in Sources */,
-				03BB5FA6210B247A00183642 /* ZSWKWebJSBridgeVC.m in Sources */,
 				032F6B0D21096AAE00DE978A /* AppDelegate.m in Sources */,
 				03078EE9221660B600783E3C /* ZSWKWebViewPayVC.m in Sources */,
 				032F6B2521096AFC00DE978A /* ZSWKWebViewVC.m in Sources */,

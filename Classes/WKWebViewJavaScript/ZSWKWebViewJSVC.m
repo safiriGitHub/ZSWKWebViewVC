@@ -67,7 +67,7 @@
 
 #pragma mark - public
 - (void)jsUserContentControllerAddScriptName:(NSString *)name {
-    [self.jsUserContentController addScriptMessageHandler:self name:@"jSCallOC"];
+    [self.jsUserContentController addScriptMessageHandler:self name:name];
 }
 
 - (void)didReceiveScriptMessage:(WKScriptMessage *)message {
