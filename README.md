@@ -28,6 +28,8 @@ WKWebView 常用功能封装
 
 0.2.0: 合并ZSWKWebJSBridgeVC 到 ZSWKWebViewVC
 
+0.2.1: 增加iPhone X 系列机型适配
+
 
 #### 安装教程
 
@@ -36,8 +38,6 @@ pod 'ZSWKWebViewVC'
 pod 'ZSWKWebViewVC/Base'
 
 pod 'ZSWKWebViewVC/WKWebViewJavaScript'
-
-pod 'ZSWKWebViewVC/WKWebViewJavascriptBridge'
 
 pod 'ZSWKWebViewVC/WKWebViewPay'
 

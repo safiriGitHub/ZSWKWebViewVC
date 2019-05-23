@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ZSWKWebViewVC"
-  s.version      = "0.2.0"
+  s.version      = "0.2.1"
   s.summary      = "WKWebView 常用功能封装"
 
   # This description is used to generate tags and improve search results.
@@ -97,18 +97,13 @@ Pod::Spec.new do |s|
     s.subspec 'Base' do |base|
       base.source_files = "Classes/Base/**/*.{h,m}"
       base.resource = "Classes/ZSWKWebView.bundle"
+      base.dependency 'WebViewJavascriptBridge'
+      base.xcconfig = { "FRAMEWORK_SEARCH_PATHS" => "$(PODS_ROOT)/WebViewJavascriptBridge"}
     end
 
     s.subspec 'WKWebViewJavaScript' do |js|
       js.source_files = "Classes/WKWebViewJavaScript/**/*.{h,m}"
       js.dependency 'ZSWKWebViewVC/Base'
-    end
-
-    s.subspec 'WKWebViewJavascriptBridge' do |jsbridge|
-      jsbridge.source_files = "Classes/WKWebViewJavascriptBridge/**/*.{h,m}"
-      jsbridge.dependency 'WebViewJavascriptBridge'
-      jsbridge.xcconfig = { "FRAMEWORK_SEARCH_PATHS" => "$(PODS_ROOT)/WebViewJavascriptBridge"}
-      jsbridge.dependency 'ZSWKWebViewVC/Base'
     end
 
     s.subspec 'WKWebViewPay' do |pay|

@@ -8,6 +8,11 @@
 
 #import "ZSWKWebViewVC.h"
 
+#define iPhoneXXS CGSizeEqualToSize(CGSizeMake(1125,2436), [[UIScreen mainScreen]currentMode].size)
+#define iPhoneXR CGSizeEqualToSize(CGSizeMake(828,1792), [[UIScreen mainScreen]currentMode].size)
+#define iPhoneXSMax CGSizeEqualToSize(CGSizeMake(1242,2688), [[UIScreen mainScreen]currentMode].size)
+#define iPhoneXSeries iPhoneXR || iPhoneXXS || iPhoneXSMax
+
 @interface ZSWKWebViewVC ()<UIGestureRecognizerDelegate>
 
 @end
@@ -81,10 +86,12 @@ NSString *const ObserVerKeyPathEstimatedProgress = @"estimatedProgress";
 NSString *const ObserVerKeyPathTitle = @"title";
 - (WKWebView *)wkWebView {
     if (!_wkWebView) {
+        
         CGRect frame = self.view.bounds;
         if (!self.navigationBarTranslucent) {
-            frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - 64);
+            frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - self.heightNavigationBar);
         }
+        
         if (self.configurationForInit) {
             _wkWebView = [[WKWebView alloc] initWithFrame:frame configuration:self.configurationForInit];
         }else {
@@ -100,12 +107,19 @@ NSString *const ObserVerKeyPathTitle = @"title";
 }
 - (UIProgressView *)progressView {
     if (!_progressView) {
-        CGFloat y = self.navigationBarTranslucent ? 64 : 0;
+        CGFloat y = self.navigationBarTranslucent ? self.heightNavigationBar : 0;
         _progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, y, self.view.frame.size.width, 1.5)];
         _progressView.progressTintColor = [UIColor colorWithRed:50.f / 255.f green:250.f / 245.f blue:0.f / 255.f alpha:1.0]; // 微信绿;
         _progressView.trackTintColor = [UIColor whiteColor];
     }
     return _progressView;
+}
+
+- (CGFloat)heightNavigationBar {
+    if (iPhoneXSeries) {
+        return 84;
+    }
+    return 64;
 }
 - (void)setWebNavigationBarStyle:(WebNavigationBarStyle)webNavigationBarStyle {
     _webNavigationBarStyle = webNavigationBarStyle;
