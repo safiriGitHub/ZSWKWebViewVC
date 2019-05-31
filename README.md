@@ -24,11 +24,13 @@ WKWebView 常用功能封装
 
 0.1.8: 优化 `ZSWkWebViewDelegateVC`类，提供常用代理方法实现
 
-0.1.9: 合并ZSWkWebViewDelegateVC 到 ZSWKWebViewVC
+0.1.9: 合并 `ZSWkWebViewDelegateVC` 到 `ZSWKWebViewVC`
 
-0.2.0: 合并ZSWKWebJSBridgeVC 到 ZSWKWebViewVC
+0.2.0: 合并 `ZSWKWebJSBridgeVC` 到 `ZSWKWebViewVC`
 
-0.2.1: 增加iPhone X 系列机型适配
+0.2.1: 增加 iPhone X 系列机型适配
+
+0.2.2: 增加是否设置 `WKWebViewJavascriptBridge（- (void)setWebViewDelegate:(id)webViewDelegate;）` 的代理
 
 
 #### 安装教程

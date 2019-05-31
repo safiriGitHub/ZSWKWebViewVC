@@ -31,7 +31,8 @@
     webViewVC.requestURL = @"https://siteapp.news18a.com/init.php?m=price&c=index&a=select_brands_daohang&type=brand&ina_from=weizhangjiaofeiyi";
     
     //webViewVC.requestURL = @"http://o2o.hks360.com/?channelCode=wzjfy";
-    
+    webViewVC.isOpenNavigationDelegate = YES;
+    webViewVC.isOpenUIDelegate = YES;
     webViewVC.navigationBarTranslucent = NO;
     webViewVC.webNavigationBarStyle = StyleBackCloseSeparate;
     [self.navigationController pushViewController:webViewVC animated:YES];

@@ -163,6 +163,8 @@ NS_ASSUME_NONNULL_BEGIN
 // MARK: - WKWebViewJavascriptBridge js交互
 @property (nonatomic ,strong) WKWebViewJavascriptBridge *javascriptBridge;
 
+@property (nonatomic, assign) BOOL openBridgeDelegate;
+
 @end
 NS_ASSUME_NONNULL_END
 

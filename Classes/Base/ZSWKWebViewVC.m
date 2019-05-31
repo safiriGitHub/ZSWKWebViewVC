@@ -312,8 +312,6 @@ NSString *const ObserVerKeyPathTitle = @"title";
 // 这个是决定是否Request
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
     
-    
-    
     /// <a href="tel:123456789">拨号</a>
     if ([navigationAction.request.URL.scheme isEqualToString:@"tel"] && self.closeRecognizePhone == NO) {
         decisionHandler(WKNavigationActionPolicyCancel);
@@ -456,6 +454,9 @@ NSString *const ObserVerKeyPathTitle = @"title";
 - (WKWebViewJavascriptBridge *)javascriptBridge {
     if (!_javascriptBridge) {
         _javascriptBridge = [WKWebViewJavascriptBridge bridgeForWebView:self.wkWebView];
+        if (self.openBridgeDelegate) {
+            [_javascriptBridge setWebViewDelegate:self];
+        }
     }
     return _javascriptBridge;
 }
