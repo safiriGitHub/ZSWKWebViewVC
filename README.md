@@ -32,6 +32,8 @@ WKWebView 常用功能封装
 
 0.2.2: 增加是否设置 `WKWebViewJavascriptBridge（- (void)setWebViewDelegate:(id)webViewDelegate;）` 的代理
 
+0.2.3: 默认设置 WKWebViewJavascriptBridge 的setWebViewDelegate
+
 
 #### 安装教程
 

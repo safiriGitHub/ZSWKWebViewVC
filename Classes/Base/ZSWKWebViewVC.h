@@ -163,7 +163,10 @@ NS_ASSUME_NONNULL_BEGIN
 // MARK: - WKWebViewJavascriptBridge js交互
 @property (nonatomic ,strong) WKWebViewJavascriptBridge *javascriptBridge;
 
-@property (nonatomic, assign) BOOL openBridgeDelegate;
+/**
+ 是否关闭bridge代理，默认开启，关闭后使用javascriptBridge后子类无法拦截到代理方法
+ */
+@property (nonatomic, assign) BOOL closeBridgeDelegate;
 
 @end
 NS_ASSUME_NONNULL_END

@@ -454,7 +454,7 @@ NSString *const ObserVerKeyPathTitle = @"title";
 - (WKWebViewJavascriptBridge *)javascriptBridge {
     if (!_javascriptBridge) {
         _javascriptBridge = [WKWebViewJavascriptBridge bridgeForWebView:self.wkWebView];
-        if (self.openBridgeDelegate) {
+        if (!self.closeBridgeDelegate) {
             [_javascriptBridge setWebViewDelegate:self];
         }
     }
