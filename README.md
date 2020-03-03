@@ -34,6 +34,7 @@ WKWebView 常用功能封装
 
 0.2.3: 默认设置 WKWebViewJavascriptBridge 的setWebViewDelegate
 
+0.2.4: fix [-Werror,-Wnon-modular-include-in-framework-module] Error
 
 #### 安装教程
 

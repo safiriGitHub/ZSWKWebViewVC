@@ -7,6 +7,7 @@
 //
 
 #import "ZSWKWebViewVC.h"
+#import "WKWebViewJavascriptBridge.h"
 
 #define iPhoneXXS CGSizeEqualToSize(CGSizeMake(1125,2436), [[UIScreen mainScreen]currentMode].size)
 #define iPhoneXR CGSizeEqualToSize(CGSizeMake(828,1792), [[UIScreen mainScreen]currentMode].size)

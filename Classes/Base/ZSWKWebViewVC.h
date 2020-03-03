@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import <WebKit/WebKit.h>
-#import "WKWebViewJavascriptBridge.h"
 
 /**
  导航栏样式
@@ -28,6 +27,7 @@ typedef NS_ENUM(NSUInteger, WebBackStyle) {
     BackStyleDismiss
 };
 
+@class WKWebViewJavascriptBridge;
 NS_ASSUME_NONNULL_BEGIN
 @interface ZSWKWebViewVC : UIViewController<WKNavigationDelegate, WKUIDelegate>
 // MARK: - Init
