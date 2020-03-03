@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
   WKWebView 常用功能封装:ZSWKWebViewVC、ZSExtendWKWebVC、ZSWKWebViewJSVC、ZSWKWebJSBridgeVC
                    DESC
 
-  s.homepage     = "https://gitee.com/safiri"
+  s.homepage     = "https://github.com/safiriGitHub/ZSWKWebViewVC"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://gitee.com/safiri/ZSWKWebViewVC.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/safiriGitHub/ZSWKWebViewVC.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
