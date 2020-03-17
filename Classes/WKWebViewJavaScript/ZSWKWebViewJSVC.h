@@ -52,7 +52,7 @@
  @param jsUrlString JS文件url地址
  @param completionHandler 加载结果回调
  */
--(void)evaluateJavaScriptRemoteURL:(NSString *)jsUrlString completionHandler:(void (^)(id _Nullable, NSError * _Nullable))completionHandler;
+-(void)evaluateJavaScriptRemoteURL:(NSString *_Nullable)jsUrlString completionHandler:(void (^_Nullable)(id _Nullable, NSError * _Nullable))completionHandler;
 
 
 /**
@@ -62,7 +62,7 @@
  @param jsFileName JS文件名
  @param completionHandler 加载结果回调
  */
--(void)evaluateJavaScriptLocalName:(NSString *)jsFileName completionHandler:(void (^)(id _Nullable, NSError * _Nullable))completionHandler;
+-(void)evaluateJavaScriptLocalName:(NSString *_Nullable)jsFileName completionHandler:(void (^_Nullable)(id _Nullable, NSError * _Nullable))completionHandler;
 @end
 
 /*

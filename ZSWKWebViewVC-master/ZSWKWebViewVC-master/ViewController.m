@@ -10,7 +10,7 @@
 #import "ZSWKWebViewVC.h"
 #import "ZSWKWebViewPayVC.h"
 #import <SafariServices/SafariServices.h>
-
+#import "JSBridgeExampleVC.h"
 
 @interface ViewController ()
 
@@ -69,14 +69,9 @@
 }
 
 - (IBAction)jsbridgeClick:(id)sender {
-//    ZSWKWebViewVC *webViewVC = [[ZSWKWebViewVC alloc] init];
-//    webViewVC.requestURL = @"http://123.232.237.119:8089/cf-app/test2.jsp";
-//
-//    [self.navigationController pushViewController:webViewVC animated:YES];
     
-    
-
-    
+    JSBridgeExampleVC *webViewVC = [[JSBridgeExampleVC alloc] init];
+    [self.navigationController pushViewController:webViewVC animated:YES];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

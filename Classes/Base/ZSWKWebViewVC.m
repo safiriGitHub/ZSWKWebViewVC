@@ -7,7 +7,6 @@
 //
 
 #import "ZSWKWebViewVC.h"
-#import "WKWebViewJavascriptBridge.h"
 
 #define iPhoneXXS CGSizeEqualToSize(CGSizeMake(1125,2436), [[UIScreen mainScreen]currentMode].size)
 #define iPhoneXR CGSizeEqualToSize(CGSizeMake(828,1792), [[UIScreen mainScreen]currentMode].size)
@@ -451,14 +450,5 @@ NSString *const ObserVerKeyPathTitle = @"title";
     return _jsTextInputTitle;
 }
 
-// MARK: - WKWebViewJavascriptBridge js交互
-- (WKWebViewJavascriptBridge *)javascriptBridge {
-    if (!_javascriptBridge) {
-        _javascriptBridge = [WKWebViewJavascriptBridge bridgeForWebView:self.wkWebView];
-        if (!self.closeBridgeDelegate) {
-            [_javascriptBridge setWebViewDelegate:self];
-        }
-    }
-    return _javascriptBridge;
-}
+
 @end

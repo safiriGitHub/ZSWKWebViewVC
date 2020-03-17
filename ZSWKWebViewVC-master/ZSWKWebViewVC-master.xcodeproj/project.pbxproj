@@ -15,6 +15,12 @@
 		032F6B1821096AB000DE978A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 032F6B1621096AB000DE978A /* LaunchScreen.storyboard */; };
 		032F6B1B21096AB000DE978A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 032F6B1A21096AB000DE978A /* main.m */; };
 		032F6B2521096AFC00DE978A /* ZSWKWebViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 032F6B2421096AFC00DE978A /* ZSWKWebViewVC.m */; };
+		03934DC6242075C00018020F /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 03934DC2242075C00018020F /* WKWebViewJavascriptBridge.m */; };
+		03934DC7242075C00018020F /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 03934DC4242075C00018020F /* WebViewJavascriptBridgeBase.m */; };
+		03934DC8242075C00018020F /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 03934DC5242075C00018020F /* WebViewJavascriptBridge_JS.m */; };
+		03934DCB242076D60018020F /* ZSWKWebViewJSBridgeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03934DCA242076D60018020F /* ZSWKWebViewJSBridgeVC.m */; };
+		03934DCE242078660018020F /* trans_agreement.html in Resources */ = {isa = PBXBuildFile; fileRef = 03934DCD242078660018020F /* trans_agreement.html */; };
+		03934DD124207B0C0018020F /* JSBridgeExampleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03934DD024207B0C0018020F /* JSBridgeExampleVC.m */; };
 		03BB5F9F210AF47000183642 /* ZSWKWebViewJSVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BB5F9E210AF47000183642 /* ZSWKWebViewJSVC.m */; };
 		03C35CDF210EB77E00A3D1F2 /* ZSWKWebView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 03C35CDE210EB77E00A3D1F2 /* ZSWKWebView.bundle */; };
 		73C179FEEB26545C455196BE /* Pods_ZSWKWebViewVC_master.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AF2497FB74E90A9AAA2B4E /* Pods_ZSWKWebViewVC_master.framework */; };
@@ -35,6 +41,18 @@
 		032F6B1A21096AB000DE978A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		032F6B2321096AFC00DE978A /* ZSWKWebViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSWKWebViewVC.h; sourceTree = "<group>"; };
 		032F6B2421096AFC00DE978A /* ZSWKWebViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZSWKWebViewVC.m; sourceTree = "<group>"; };
+		03934DC0242075C00018020F /* WebViewJavascriptBridgeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeBase.h; sourceTree = "<group>"; };
+		03934DC1242075C00018020F /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		03934DC2242075C00018020F /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		03934DC3242075C00018020F /* WebViewJavascriptBridge_JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge_JS.h; sourceTree = "<group>"; };
+		03934DC4242075C00018020F /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
+		03934DC5242075C00018020F /* WebViewJavascriptBridge_JS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge_JS.m; sourceTree = "<group>"; };
+		03934DC9242076D60018020F /* ZSWKWebViewJSBridgeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSWKWebViewJSBridgeVC.h; sourceTree = "<group>"; };
+		03934DCA242076D60018020F /* ZSWKWebViewJSBridgeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZSWKWebViewJSBridgeVC.m; sourceTree = "<group>"; };
+		03934DCC242078030018020F /* ZSWKWebViewJSBridgeVC_Example.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ZSWKWebViewJSBridgeVC_Example.md; sourceTree = "<group>"; };
+		03934DCD242078660018020F /* trans_agreement.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = trans_agreement.html; sourceTree = "<group>"; };
+		03934DCF24207B0C0018020F /* JSBridgeExampleVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSBridgeExampleVC.h; sourceTree = "<group>"; };
+		03934DD024207B0C0018020F /* JSBridgeExampleVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSBridgeExampleVC.m; sourceTree = "<group>"; };
 		03BB5F9D210AF47000183642 /* ZSWKWebViewJSVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSWKWebViewJSVC.h; sourceTree = "<group>"; };
 		03BB5F9E210AF47000183642 /* ZSWKWebViewJSVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZSWKWebViewJSVC.m; sourceTree = "<group>"; };
 		03C35CDE210EB77E00A3D1F2 /* ZSWKWebView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZSWKWebView.bundle; sourceTree = "<group>"; };
@@ -90,11 +108,15 @@
 				032F6B0C21096AAE00DE978A /* AppDelegate.m */,
 				032F6B0E21096AAE00DE978A /* ViewController.h */,
 				032F6B0F21096AAE00DE978A /* ViewController.m */,
+				03934DCF24207B0C0018020F /* JSBridgeExampleVC.h */,
+				03934DD024207B0C0018020F /* JSBridgeExampleVC.m */,
 				032F6B1121096AAE00DE978A /* Main.storyboard */,
 				032F6B1421096AB000DE978A /* Assets.xcassets */,
 				032F6B1621096AB000DE978A /* LaunchScreen.storyboard */,
 				032F6B1921096AB000DE978A /* Info.plist */,
 				032F6B1A21096AB000DE978A /* main.m */,
+				03934DCC242078030018020F /* ZSWKWebViewJSBridgeVC_Example.md */,
+				03934DCD242078660018020F /* trans_agreement.html */,
 			);
 			path = "ZSWKWebViewVC-master";
 			sourceTree = "<group>";
@@ -102,6 +124,7 @@
 		032F6B2121096AD000DE978A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				03934DBF2420758E0018020F /* WKWebViewJavascriptBridge */,
 				03078EE622165B8D00783E3C /* WKWebViewPay */,
 				03BB5F9C210AF40D00183642 /* WKWebViewJavaScript */,
 				032F6B2221096AD000DE978A /* Base */,
@@ -118,6 +141,21 @@
 				032F6B2421096AFC00DE978A /* ZSWKWebViewVC.m */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		03934DBF2420758E0018020F /* WKWebViewJavascriptBridge */ = {
+			isa = PBXGroup;
+			children = (
+				03934DC3242075C00018020F /* WebViewJavascriptBridge_JS.h */,
+				03934DC5242075C00018020F /* WebViewJavascriptBridge_JS.m */,
+				03934DC0242075C00018020F /* WebViewJavascriptBridgeBase.h */,
+				03934DC4242075C00018020F /* WebViewJavascriptBridgeBase.m */,
+				03934DC1242075C00018020F /* WKWebViewJavascriptBridge.h */,
+				03934DC2242075C00018020F /* WKWebViewJavascriptBridge.m */,
+				03934DC9242076D60018020F /* ZSWKWebViewJSBridgeVC.h */,
+				03934DCA242076D60018020F /* ZSWKWebViewJSBridgeVC.m */,
+			);
+			path = WKWebViewJavascriptBridge;
 			sourceTree = "<group>";
 		};
 		03BB5F9C210AF40D00183642 /* WKWebViewJavaScript */ = {
@@ -157,7 +195,6 @@
 				032F6B0421096AAE00DE978A /* Sources */,
 				032F6B0521096AAE00DE978A /* Frameworks */,
 				032F6B0621096AAE00DE978A /* Resources */,
-				348D00A7D74D37B32137CEB5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -209,30 +246,13 @@
 				032F6B1521096AB000DE978A /* Assets.xcassets in Resources */,
 				03C35CDF210EB77E00A3D1F2 /* ZSWKWebView.bundle in Resources */,
 				032F6B1321096AAE00DE978A /* Main.storyboard in Resources */,
+				03934DCE242078660018020F /* trans_agreement.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		348D00A7D74D37B32137CEB5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ZSWKWebViewVC-master/Pods-ZSWKWebViewVC-master-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/WebViewJavascriptBridge/WebViewJavascriptBridge.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WebViewJavascriptBridge.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZSWKWebViewVC-master/Pods-ZSWKWebViewVC-master-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		DE730C050B9A7F8E8DD79497 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -258,12 +278,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03934DC7242075C00018020F /* WebViewJavascriptBridgeBase.m in Sources */,
 				032F6B1021096AAE00DE978A /* ViewController.m in Sources */,
 				032F6B1B21096AB000DE978A /* main.m in Sources */,
 				03BB5F9F210AF47000183642 /* ZSWKWebViewJSVC.m in Sources */,
 				032F6B0D21096AAE00DE978A /* AppDelegate.m in Sources */,
+				03934DC8242075C00018020F /* WebViewJavascriptBridge_JS.m in Sources */,
 				03078EE9221660B600783E3C /* ZSWKWebViewPayVC.m in Sources */,
+				03934DCB242076D60018020F /* ZSWKWebViewJSBridgeVC.m in Sources */,
 				032F6B2521096AFC00DE978A /* ZSWKWebViewVC.m in Sources */,
+				03934DD124207B0C0018020F /* JSBridgeExampleVC.m in Sources */,
+				03934DC6242075C00018020F /* WKWebViewJavascriptBridge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <style>
+        body {
+            background-color: #f2f5fa;
+        }
+
+        h3 {
+            color: #4f4f4f;
+            text-align: center;
+        }
+
+        .content {
+            display: block;
+            font-size: 10pt;
+            color: #666666;
+        }
+
+        .table-info {
+            text-align: center;
+            font-size: 11pt;
+            color: #666666;
+            margin: 0 auto;
+        }
+
+
+    </style>
+</head>
+
+<body>
+<div class="agreement-content">
+    <p>
+    <h3>车辆运输协议书</h3>
+    </p>
+    <p>
+            <span class="content"
+                  style="text-indent: 2em;">甲、乙双方本着平等公平、互惠互利的原则，在中华人民共和国法律、法规规定的范围内，在诚实守信、友好协商的基础上，达成货物运输长期合作伙伴关系。具体协议包括：</span>
+    </p>
+    <p>
+        <span class="content">一、在合同期间，甲方为乙方提供相应的货源，运输价格在甲乙双方经协商同意后，乙方负责货物承运。</span>
+    </p>
+    <p>
+        <span class="content">二、乙方为甲方提供设备齐全、车况良好、运行安全可靠、证件齐全的车辆，为甲方完成货物运输任务。其中：</span>
+    </p>
+    <p>
+        <span class="content">（一）乙方的证件信息，包括身份证、驾驶证、行驶证等，详见平台资料。</span>
+    </p>
+    <p>
+        <span class="content">（二）乙方的车辆基本情况如下（详见平台资料）：</span>
+    </p>
+    <table class="table-info" cellspacing="0">
+        <tr>
+            <td
+                    style="padding: 2pt 10pt 2pt 10pt; border-style: solid solid solid solid; border-width: 0.6pt; border-color: #dddddd;">
+                <span>车牌号码</span></td>
+            <td
+                    style="padding: 2pt 10pt 2pt 10pt; border-style: solid solid solid none; border-width: 0.6pt; border-color: #dddddd;">
+                <span id="td-plate-num"></span></td>
+        </tr>
+        <tr>
+            <td
+                    style="padding: 2pt 10pt 2pt 10pt; border-style: none solid solid solid ; border-width: 0.6pt; border-color: #dddddd;">
+                <span>随车手机</span></td>
+            <td
+                    style="padding: 2pt 10pt 2pt 10pt; border-style:none solid solid none ; border-width: 0.6pt; border-color: #dddddd;">
+                <span id="td-phone"></span></td>
+        </tr>
+    </table>
+   
+    <p>
+        <span class="content" style="display:inline;">甲方（盖章签字）：</span>
+        <span class="content"
+              style="display:inline; border-style: none none solid none; border-width: 1pt; border-color: #666666;"
+              id="first-party"></span>
+    </p>
+    <p>
+        <span class="content" style="display:inline;">乙方（盖章签字）：</span>
+        <span class="content"
+              style="display:inline; border-style: none none solid none; border-width: 1pt; border-color: #666666;"
+              id="second-party"></span>
+    </p>
+    <p>
+        <span class="content" style="display:inline;">居民身份证号码：</span>
+        <span class="content"
+              style="display:inline; border-style: none none solid none; border-width: 1pt; border-color: #666666;"
+              id="id-num"></span>
+    </p>
+    <p>
+        <span class="content" style="display:inline;">签订时间：</span>
+        <span class="content"
+              style="display:inline; border-style: none none solid none; border-width: 1pt; border-color: #666666;"
+              id="time-year"></span>
+        <span class="content" style="display:inline;">年</span>
+        <span class="content"
+              style="display:inline; border-style: none none solid none; border-width: 1pt; border-color: #666666;"
+              id="time-month"></span>
+        <span class="content" style="display:inline;">月</span>
+        <span class="content"
+              style="display:inline; border-style: none none solid none; border-width: 1pt; border-color: #666666;"
+              id="time-day"></span>
+        <span class="content" style="display:inline;">日</span>
+    </p>
+</div>
+
+<script type="text/javascript">
+function inputPlateNum(plateNum) {
+    document.getElementById("td-plate-num").innerHTML = plateNum;
+}
+function inputPhone(phone) {
+    document.getElementById("td-phone").innerHTML = phone;
+}
+function inputFirstParty(firstParty) {
+    document.getElementById("first-party").innerHTML = firstParty;
+}
+function inputSecondParty(secondParty) {
+    document.getElementById("second-party").innerHTML = secondParty;
+}
+function inputIdNum(idNum) {
+    document.getElementById("id-num").innerHTML = idNum;
+}
+function inputYear(year) {
+    document.getElementById("time-year").innerHTML = year;
+}
+function inputMonth(month) {
+    document.getElementById("time-month").innerHTML = month;
+}
+function inputDay(day) {
+    document.getElementById("time-day").innerHTML = day;
+}
+
+    var browser = {
+        versions : function() {
+         var u = navigator.userAgent, app = navigator.appVersion;
+         return {// 移动终端浏览器版本信息
+             trident : u.indexOf('Trident') > -1, // IE内核
+             presto : u.indexOf('Presto') > -1, // opera内核
+             webKit : u.indexOf('AppleWebKit') > -1, // 苹果、谷歌内核
+             gecko : u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, // 火狐内核
+             mobile : !!u.match(/AppleWebKit.*Mobile.*/)
+                     || !!u.match(/AppleWebKit/), // 是否为移动终端
+             ios : !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), // ios终端
+             android : u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, // android终端或者uc浏览器
+             iPhone : u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, // 是否为iPhone或者QQHD浏览器
+             iPad : u.indexOf('iPad') > -1, // 是否iPad
+             webApp : u.indexOf('Safari') == -1
+         // 是否web应该程序，没有头部与底部
+         };
+     }(),
+       language : (navigator.browserLanguage || navigator.language).toLowerCase()
+     }
+ function setupWebViewJavascriptBridge(callback) {
+     if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
+     if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
+     window.WVJBCallbacks = [callback];
+     var WVJBIframe = document.createElement('iframe');
+     WVJBIframe.style.display = 'none';
+     WVJBIframe.src = 'wvjbscheme://__BRIDGE_LOADED__';
+     document.documentElement.appendChild(WVJBIframe);
+     setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
+ }
+
+ function getXieyiInfo(){
+     if (browser.versions.ios || browser.versions.iPhone || browser.versions.iPad) {//IOS
+         setupWebViewJavascriptBridge(function(bridge) {
+             bridge.callHandler('inputPlateNum', {}, function(response) {
+                 inputPlateNum(response)
+             });
+                                      bridge.callHandler('inputPhone', {}, function(response) {
+                                          inputPhone(response)
+                                      });
+                                      bridge.callHandler('inputFirstParty', {}, function(response) {
+                                          inputFirstParty(response)
+                                      });
+                                      bridge.callHandler('inputSecondParty', {}, function(response) {
+                                          inputSecondParty(response)
+                                      });
+                                      bridge.callHandler('inputIdNum', {}, function(response) {
+                                          inputIdNum(response)
+                                      });
+                                      bridge.callHandler('inputYear', {}, function(response) {
+                                          inputYear(response)
+                                      });
+                                      bridge.callHandler('inputMonth', {}, function(response) {
+                                          inputMonth(response)
+                                      });
+                                      bridge.callHandler('inputDay', {}, function(response) {
+                                          inputDay(response)
+                                      });
+                                      
+         });
+     }else{//Android
+          
+     }
+     
+ }
+ 
+ window.onload = function(){
+     getXieyiInfo();
+ }
+</script>
+
+</body>
+
+</html>
