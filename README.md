@@ -38,6 +38,8 @@ WKWebView 常用功能封装
 
 0.2.5：fix ITMS-90809: Deprecated API Usage - Apple will stop accepting submissions of new apps that use UIWebView APIs starting from April 2020. 原因：项目中用到了 WebViewJavascriptBridge 里面有UIWebView 的代码。代码两年多没更新了，故拖到本地并删除WebViewJavascriptBridge 类文件。移除 WebViewJavascriptBridge 依赖，手动引用，如果以后有更新，自己再手动更新。
 
+0.2.6: 增加自定义导航栏返回关闭按钮
+
 #### 安装教程
 
 pod 'ZSWKWebViewVC'

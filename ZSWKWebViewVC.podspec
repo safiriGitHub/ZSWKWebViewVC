@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ZSWKWebViewVC"
-  s.version      = "0.2.5"
+  s.version      = "0.2.6"
   s.summary      = "WKWebView 常用功能封装"
 
   # This description is used to generate tags and improve search results.
