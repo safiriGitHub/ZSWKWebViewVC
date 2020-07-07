@@ -64,6 +64,17 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, assign) BOOL navigationBarTranslucent;
 
+/**
+ 导航栏返回按钮图片
+ */
+@property (nonatomic, strong) UIImage *navBackItemImage;
+
+/**
+ 导航栏关闭按钮图片
+ */
+@property (nonatomic, strong) UIImage *navCloseItemImage;
+
+
 // MARK: - config
 /**
  网页加载标题

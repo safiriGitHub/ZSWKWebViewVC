@@ -180,12 +180,21 @@ NSString *const ObserVerKeyPathTitle = @"title";
             fixedSpace.width = 15.0f;
             
             UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-            [leftBtn setImage:[self getDefaultBundleImage:@"webNav_backItem@2x"] forState:UIControlStateNormal];
+            if (self.navBackItemImage) {
+                [leftBtn setImage:self.navBackItemImage forState:UIControlStateNormal];
+            }else {
+                [leftBtn setImage:[self getDefaultBundleImage:@"webNav_backItem@2x"] forState:UIControlStateNormal];
+            }
             [leftBtn addTarget:self action:@selector(backNavigationButtonClick) forControlEvents:UIControlEventTouchUpInside];
             UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
             
             UIButton *popBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-            [popBtn setImage:[self getDefaultBundleImage:@"webNav_closeItem@2x"] forState:UIControlStateNormal];
+            if (self.navCloseItemImage) {
+                [popBtn setImage:self.navCloseItemImage forState:UIControlStateNormal];
+            }else {
+                [popBtn setImage:[self getDefaultBundleImage:@"webNav_closeItem@2x"] forState:UIControlStateNormal];
+            }
+            
             [popBtn addTarget:self action:@selector(closeNavigationButtonClick) forControlEvents:UIControlEventTouchUpInside];
             UIBarButtonItem *popItem = [[UIBarButtonItem alloc] initWithCustomView:popBtn];
             
@@ -214,11 +223,21 @@ NSString *const ObserVerKeyPathTitle = @"title";
     }
     else if (self.webNavigationBarStyle == StyleBackCloseSeparate) {
         //返回按钮用系统的
-        UIImage *image1 = [[self getDefaultBundleImage:@"webNav_backItem@2x"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        UIImage *image1;
+        if (self.navBackItemImage) {
+            image1 = self.navBackItemImage;
+        }else {
+            image1 = [[self getDefaultBundleImage:@"webNav_backItem@2x"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        }
         UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithImage:image1 style:UIBarButtonItemStyleDone target:self action:@selector(backNavigationButtonClick)];
         self.navigationItem.leftBarButtonItem = backItem;
         //右侧关闭按钮：
-        UIImage *image2 = [[self getDefaultBundleImage:@"webNav_closeItem@2x"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        UIImage *image2;
+        if (self.navCloseItemImage) {
+            image2 = self.navCloseItemImage;
+        }else {
+            image2 = [[self getDefaultBundleImage:@"webNav_closeItem@2x"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        }
         UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithImage:image2 style:UIBarButtonItemStyleDone target:self action:@selector(closeNavigationButtonClick)];
         self.navigationItem.rightBarButtonItem = rightItem;
     }

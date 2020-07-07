@@ -20,14 +20,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationController.navigationBar.barTintColor = [UIColor blueColor];
+    self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
     self.navigationController.navigationBar.translucent = NO;
 }
 
 - (IBAction)push:(id)sender {
     
-    
     ZSWKWebViewVC *webViewVC = [[ZSWKWebViewVC alloc] init];
+    webViewVC.navBackItemImage = [[UIImage imageNamed:@"nav_back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    webViewVC.navCloseItemImage = [[UIImage imageNamed:@"nav_close"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
     //webViewVC.requestURL = @"https://www.baidu.com";
     //webViewVC.requestURL = @"https://product.haibaobaoxian.com/index?pcode=weizjfy-h5-all&version=testb";
     webViewVC.requestURL = @"https://siteapp.news18a.com/init.php?m=price&c=index&a=select_brands_daohang&type=brand&ina_from=weizhangjiaofeiyi";
